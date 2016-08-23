@@ -1,0 +1,19 @@
+<ActionBar #ac id="acbar" title="Title"  [visibility]="isItemVisible ? 'visible' : 'collapsed'">
+    <ActionItem>
+        <Button class="" text="Left"></Button>
+    </ActionItem>
+    <ActionItem ios.position="right">
+        <Button class="" text="Right"></Button>
+    </ActionItem>
+</ActionBar>
+<TabView #tabview>
+  <StackLayout *tabItem="{title: 'Tab1'}">
+    <Label text="This is Label in Tab 1"></Label>
+    <Button text="Show/Hide" (tap)="onTap()"></Button>
+    <Button text="Show/Hide" (tap)="secondTap()"></Button>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Tab2'}">
+    <Label text="This is Label in Tab 2"></Label>
+  </StackLayout>
+</TabView>
+
